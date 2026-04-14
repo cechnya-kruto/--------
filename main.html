@@ -1,0 +1,2533 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Flora Encyclopedia</title>
+  <meta property="og:title" content="Flora Encyclopedia">
+  <meta property="og:description" content="A curated collection of the world's most beautiful flowers.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#2d6a4f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" type="image/png" href="flower-encyclopedia--daniyarasanov20.replit.app_files/assets/logo/logo.png">
+  <link rel="apple-touch-icon" href="flower-encyclopedia--daniyarasanov20.replit.app_files/assets/logo/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-primary">Flora</span>
+        <span class="logo-secondary">Encyclopedia</span>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu">
+        <a href="main.html" class="nav-link">Главная</a>
+        <a href="collection.html" class="nav-link">Коллекция</a>
+        <a href="about.html" class="nav-link">О проекте</a>
+        <a href="#contacts" class="nav-link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero секция -->
+    <section class="hero-section">
+      <div class="hero-background">
+        <img src="./flower-encyclopedia--daniyarasanov20.replit.app_files/assets/backgrounds/hero-bg-BHweDHkZ.png"
+          alt="Botanical Garden" class="hero-image">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="fade-in">
+          <h1 class="hero-title">
+            Flora <span class="hero-title-italic">Encyclopedia</span>
+          </h1>
+          <p class="hero-description">
+            Discover the botanical world through our curated collection of nature's most exquisite masterpieces.
+          </p>
+
+          <!-- Поиск -->
+          <div class="search-container">
+            <div class="search-group">
+              <div class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.34-4.34"></path>
+                </svg>
+              </div>
+              <input type="text" class="search-input" placeholder="Search by name, scientific name...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Коллекция цветов -->
+    <section class="collection-section">
+      <div class="collection-header">
+        <div>
+          <h2 class="collection-title">Collection</h2>
+        </div>
+      </div>
+
+      <!-- Сетка карточек -->
+      <div class="flower-grid">
+        <!-- Карточка 1: Rose -->
+        <div class="flower-card" data-flower-id="1">
+          <div class="card-image-container">
+            <img src="./flower-encyclopedia--daniyarasanov20.replit.app_files/flower-rose-DJvk7aO5.jpg" alt="Rose"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Rosa rubiginosa</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Rose</h3>
+                <p class="flower-family">Rosaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Fragrant</span>
+            <span class="tag">#Classic</span>
+          </div>
+        </div>
+
+        <!-- Карточка 2: Tulip -->
+        <div class="flower-card" data-flower-id="2">
+          <div class="card-image-container">
+            <img src="./flower-encyclopedia--daniyarasanov20.replit.app_files/flower-tulip-B1R-5LJD.jpg" alt="Tulip"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Tulipa</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Tulip</h3>
+                <p class="flower-family">Liliaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Spring</span>
+            <span class="tag">#Colorful</span>
+          </div>
+        </div>
+
+        <!-- Карточка 3: Sunflower -->
+        <div class="flower-card" data-flower-id="3">
+          <div class="card-image-container">
+            <img src="./flower-encyclopedia--daniyarasanov20.replit.app_files/flower-sunflower-CCjRwi8R.jpg"
+              alt="Sunflower" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Helianthus annuus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Sunflower</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Sunny</span>
+            <span class="tag">#Tall</span>
+          </div>
+        </div>
+
+        <!-- Карточка 4: Orchid -->
+        <div class="flower-card" data-flower-id="4">
+          <div class="card-image-container">
+            <img src="./flower-encyclopedia--daniyarasanov20.replit.app_files/flower-orchid-CA60dR4_.jpg" alt="Orchid"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Phalaenopsis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Orchid</h3>
+                <p class="flower-family">Orchidaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Exotic</span>
+            <span class="tag">#Indoor</span>
+          </div>
+        </div>
+
+        <!-- Карточка 5: Lily -->
+        <div class="flower-card" data-flower-id="5">
+          <div class="card-image-container">
+            <img src="./flower-encyclopedia--daniyarasanov20.replit.app_files/201226437659852800.jpeg" alt="Lily"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Lily</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Lily</h3>
+                <p class="flower-family">Liliaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Exotic</span>
+            <span class="tag">#Indoor</span>
+          </div>
+        </div>
+
+        <!-- Карточка 6: Peony -->
+        <div class="flower-card" data-flower-id="6">
+          <div class="card-image-container">
+            <img src="./flower-encyclopedia--daniyarasanov20.replit.app_files/garden-peonies.webp" alt="Peony"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Peony</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Peony</h3>
+                <p class="flower-family">Paeoniaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Exotic</span>
+            <span class="tag">#Indoor</span>
+          </div>
+        </div>
+
+        <!-- Карточка 7: Mimosa -->
+        <div class="flower-card" data-flower-id="7">
+          <div class="card-image-container">
+            <img
+              src="./flower-encyclopedia--daniyarasanov20.replit.app_files/mimosa_greens_flynn_-_pdp_3_pumped_500x.webp"
+              alt="Mimosa" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Fabaceae</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Mimosa</h3>
+                <p class="flower-family">Mimosoideae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Exotic</span>
+            <span class="tag">#Indoor</span>
+          </div>
+        </div>
+
+        <!-- Карточка 8: Violet -->
+        <div class="flower-card" data-flower-id="8">
+          <div class="card-image-container">
+            <img src="./flower-encyclopedia--daniyarasanov20.replit.app_files/halo-sky-blue-tufted-violet-1-3.webp"
+              alt="Violet" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Violet</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Violet</h3>
+                <p class="flower-family">Violaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Exotic</span>
+            <span class="tag">#Indoor</span>
+          </div>
+        </div>
+
+        <!-- Карточка 9: Daisy -->
+        <div class="flower-card" data-flower-id="9">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2026/02/23/11/18/11-18-48-660_1280.jpg" alt="Daisy"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Bellis perennis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Daisy</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Simple</span>
+            <span class="tag">#Cheerful</span>
+          </div>
+        </div>
+
+        <!-- Карточка 10: Lavender -->
+        <div class="flower-card" data-flower-id="10">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2016/08/15/14/35/lavender-1595581_1280.jpg" alt="Lavender"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Lavandula</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Lavender</h3>
+                <p class="flower-family">Lamiaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Aromatic</span>
+            <span class="tag">#Medicinal</span>
+          </div>
+        </div>
+
+        <!-- Карточка 11: Carnation -->
+        <div class="flower-card" data-flower-id="11">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2018/04/20/18/42/carnation-3336751_1280.jpg" alt="Carnation"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Dianthus caryophyllus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Carnation</h3>
+                <p class="flower-family">Caryophyllaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Long-lasting</span>
+            <span class="tag">#Fragrant</span>
+          </div>
+        </div>
+
+        <!-- Карточка 12: Iris -->
+        <div class="flower-card" data-flower-id="12">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2017/02/16/18/04/iris-2072008_1280.jpg" alt="Iris"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Iris germanica</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Iris</h3>
+                <p class="flower-family">Iridaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Elegant</span>
+            <span class="tag">#Purple</span>
+          </div>
+        </div>
+
+        <!-- Карточка 13: Dahlia -->
+        <div class="flower-card" data-flower-id="13">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2020/04/18/15/06/dahlia-5059489_1280.jpg" alt="Dahlia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Dahlia pinnata</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Dahlia</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Bold</span>
+            <span class="tag">#Colorful</span>
+          </div>
+        </div>
+
+        <!-- Карточка 14: Marigold -->
+        <div class="flower-card" data-flower-id="14">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2019/04/01/13/47/worries-4095412_1280.jpg" alt="Marigold"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Tagetes</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Marigold</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Bright</span>
+            <span class="tag">#Garden</span>
+          </div>
+        </div>
+
+        <!-- Карточка 15: Zinnia -->
+        <div class="flower-card" data-flower-id="15">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2018/09/13/20/17/flowers-3675673_1280.jpg" alt="Zinnia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Zinnia elegans</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Zinnia</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Summer</span>
+            <span class="tag">#Vibrant</span>
+          </div>
+        </div>
+
+        <!-- Карточка 16: Poppy -->
+        <div class="flower-card" data-flower-id="16">
+          <div class="card-image-container">
+            <img
+              src="https://media.istockphoto.com/id/476026926/photo/red-poppies.jpg?s=2048x2048&w=is&k=20&c=AT57fvPj4Qi-cRho7sjRca3q8fRWwv82NAOMQd8JsrA="
+              alt="Poppy" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Papaver rhoeas</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Poppy</h3>
+                <p class="flower-family">Papaveraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Wild</span>
+            <span class="tag">#Red</span>
+          </div>
+        </div>
+
+        <!-- Карточка 17: Hydrangea -->
+        <div class="flower-card" data-flower-id="17">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2019/11/11/22/57/hydrangea-macrophylla-4619708_1280.jpg"
+              alt="Hydrangea" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Hydrangea macrophylla</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Hydrangea</h3>
+                <p class="flower-family">Hydrangeaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Shrub</span>
+            <span class="tag">#Blue</span>
+          </div>
+        </div>
+
+        <!-- Карточка 18: Begonia -->
+        <div class="flower-card" data-flower-id="18">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2018/09/12/15/21/begonia-3672410_1280.jpg" alt="Begonia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Begonia semperflorens</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Begonia</h3>
+                <p class="flower-family">Begoniaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Shade</span>
+            <span class="tag">#Bedding</span>
+          </div>
+        </div>
+
+        <!-- Карточка 19: Geranium -->
+        <div class="flower-card" data-flower-id="19">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2020/04/08/20/01/geranium-5018752_1280.jpg" alt="Geranium"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Pelargonium</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Geranium</h3>
+                <p class="flower-family">Geraniaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Balcony</span>
+            <span class="tag">#Hardy</span>
+          </div>
+        </div>
+
+        <!-- Карточка 20: Jasmine -->
+        <div class="flower-card" data-flower-id="20">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2018/05/25/09/24/jasmine-3428630_1280.jpg" alt="Jasmine"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Jasminum officinale</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Jasmine</h3>
+                <p class="flower-family">Oleaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Fragrant</span>
+            <span class="tag">#Climbing</span>
+          </div>
+        </div>
+
+        <!-- Карточка 21: Magnolia -->
+        <div class="flower-card" data-flower-id="21">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2020/04/11/07/22/magnolia-tree-5029172_1280.jpg" alt="Magnolia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Magnolia grandiflora</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Magnolia</h3>
+                <p class="flower-family">Magnoliaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Tree</span>
+            <span class="tag">#Spring</span>
+          </div>
+        </div>
+
+        <!-- Карточка 22: Camellia -->
+        <div class="flower-card" data-flower-id="22">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2022/05/02/21/40/camellia-7170469_1280.jpg" alt="Camellia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Camellia japonica</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Camellia</h3>
+                <p class="flower-family">Theaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Winter</span>
+            <span class="tag">#Elegant</span>
+          </div>
+        </div>
+
+        <!-- Карточка 23: Azalea -->
+        <div class="flower-card" data-flower-id="23">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2022/06/24/18/48/azalea-7282283_1280.jpg" alt="Azalea"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Rhododendron indicum</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Azalea</h3>
+                <p class="flower-family">Ericaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Acidic</span>
+            <span class="tag">#Spring</span>
+          </div>
+        </div>
+
+        <!-- Карточка 24: Gardenia -->
+        <div class="flower-card" data-flower-id="24">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2020/04/27/02/41/gardenia-5097886_1280.jpg" alt="Gardenia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Gardenia jasminoides</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Gardenia</h3>
+                <p class="flower-family">Rubiaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Fragrant</span>
+            <span class="tag">#White</span>
+          </div>
+        </div>
+
+        <!-- Карточка 25: Hibiscus -->
+        <div class="flower-card" data-flower-id="25">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2021/11/10/14/25/hibiscus-6784088_1280.jpg" alt="Hibiscus"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Hibiscus rosa-sinensis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Hibiscus</h3>
+                <p class="flower-family">Malvaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Tropical</span>
+            <span class="tag">#Bold</span>
+          </div>
+        </div>
+
+        <!-- Карточка 26: Freesia -->
+        <div class="flower-card" data-flower-id="26">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2017/02/27/15/52/freesia-2103549_1280.jpg" alt="Freesia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Freesia refracta</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Freesia</h3>
+                <p class="flower-family">Iridaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Fragrant</span>
+            <span class="tag">#Spring</span>
+          </div>
+        </div>
+
+        <!-- Карточка 27: Anemone -->
+        <div class="flower-card" data-flower-id="27">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2020/04/17/19/57/anemone-5056690_1280.jpg" alt="Anemone"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Anemone coronaria</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Anemone</h3>
+                <p class="flower-family">Ranunculaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Delicate</span>
+            <span class="tag">#Spring</span>
+          </div>
+        </div>
+
+        <!-- Карточка 28: Ranunculus -->
+        <div class="flower-card" data-flower-id="28">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2024/04/09/16/05/flowers-8686271_1280.jpg" alt="Ranunculus"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Ranunculus asiaticus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Ranunculus</h3>
+                <p class="flower-family">Ranunculaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Layered</span>
+            <span class="tag">#Romantic</span>
+          </div>
+        </div>
+
+        <!-- Карточка 29: Delphinium -->
+        <div class="flower-card" data-flower-id="29">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2020/02/10/07/56/delphinium-4835630_1280.jpg" alt="Delphinium"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Delphinium elatum</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Delphinium</h3>
+                <p class="flower-family">Ranunculaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Tall</span>
+            <span class="tag">#Blue</span>
+          </div>
+        </div>
+
+        <!-- Карточка 30: Foxglove -->
+        <div class="flower-card" data-flower-id="30">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2016/08/29/14/45/flower-1628426_1280.jpg" alt="Foxglove"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Digitalis purpurea</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Foxglove</h3>
+                <p class="flower-family">Plantaginaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Woodland</span>
+            <span class="tag">#Medicinal</span>
+          </div>
+        </div>
+
+        <!-- Карточка 31: Hollyhock -->
+        <div class="flower-card" data-flower-id="31">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2018/08/25/14/17/stock-rose-3630185_1280.jpg" alt="Hollyhock"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Alcea rosea</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Hollyhock</h3>
+                <p class="flower-family">Malvaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Cottage</span>
+            <span class="tag">#Tall</span>
+          </div>
+        </div>
+
+        <!-- Карточка 32: Snapdragon -->
+        <div class="flower-card" data-flower-id="32">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2022/08/08/15/05/snapdragon-7372911_1280.jpg" alt="Snapdragon"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Antirrhinum majus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Snapdragon</h3>
+                <p class="flower-family">Plantaginaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Cool</span>
+            <span class="tag">#Cut</span>
+          </div>
+        </div>
+
+        <!-- Карточка 33: Sweet Pea -->
+        <div class="flower-card" data-flower-id="33">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2019/10/15/13/56/sweet-pea-scented-4551745_1280.jpg" alt="Sweet Pea"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Lathyrus odoratus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Sweet Pea</h3>
+                <p class="flower-family">Fabaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Fragrant</span>
+            <span class="tag">#Climbing</span>
+          </div>
+        </div>
+
+        <!-- Карточка 34: Cosmos -->
+        <div class="flower-card" data-flower-id="34">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2018/01/16/01/20/nature-3085149_1280.jpg" alt="Cosmos"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Cosmos bipinnatus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Cosmos</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Airy</span>
+            <span class="tag">#Late</span>
+          </div>
+        </div>
+
+        <!-- Карточка 35: Aster -->
+        <div class="flower-card" data-flower-id="35">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2022/10/28/06/36/aster-7552465_1280.jpg" alt="Aster"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Symphyotrichum</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Aster</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Fall</span>
+            <span class="tag">#Star</span>
+          </div>
+        </div>
+
+        <!-- Карточка 36: Chrysanthemum -->
+        <div class="flower-card" data-flower-id="36">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2023/10/29/16/07/chrysanthemum-8350644_1280.jpg" alt="Chrysanthemum"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Chrysanthemum morifolium</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Chrysanthemum</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Fall</span>
+            <span class="tag">#Long-lasting</span>
+          </div>
+        </div>
+
+        <!-- Карточка 37: Gladiolus -->
+        <div class="flower-card" data-flower-id="37">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2017/06/16/16/59/bloom-2409656_1280.jpg" alt="Gladiolus"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Gladiolus hybridus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Gladiolus</h3>
+                <p class="flower-family">Iridaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Tall</span>
+            <span class="tag">#Summer</span>
+          </div>
+        </div>
+
+        <!-- Карточка 38: Crocus -->
+        <div class="flower-card" data-flower-id="38">
+          <div class="card-image-container">
+            <img src="http://cdn.pixabay.com/photo/2024/02/15/15/29/crocus-8575610_1280.jpg" alt="Crocus"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Crocus vernus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Crocus</h3>
+                <p class="flower-family">Iridaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Early</span>
+            <span class="tag">#Bulb</span>
+          </div>
+        </div>
+
+        <!-- Карточка 39: Snowdrop -->
+        <div class="flower-card" data-flower-id="39">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2016/01/28/16/18/spring-1166564_1280.jpg" alt="Snowdrop"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Galanthus nivalis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Snowdrop</h3>
+                <p class="flower-family">Amaryllidaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Winter</span>
+            <span class="tag">#Early</span>
+          </div>
+        </div>
+
+        <!-- Карточка 40: Daffodil -->
+        <div class="flower-card" data-flower-id="40">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2019/04/08/08/35/narcissus-4111577_1280.jpg" alt="Daffodil"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Narcissus pseudonarcissus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Daffodil</h3>
+                <p class="flower-family">Amaryllidaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Spring</span>
+            <span class="tag">#Yellow</span>
+          </div>
+        </div>
+
+        <!-- Карточка 41: Hyacinth -->
+        <div class="flower-card" data-flower-id="41">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2020/05/30/12/21/hyacinth-5238669_1280.jpg" alt="Hyacinth"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Hyacinthus orientalis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Hyacinth</h3>
+                <p class="flower-family">Asparagaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Fragrant</span>
+            <span class="tag">#Spring</span>
+          </div>
+        </div>
+
+        <!-- Карточка 42: Allium -->
+        <div class="flower-card" data-flower-id="42">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2023/07/05/13/34/allium-8108318_1280.jpg" alt="Allium"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Allium giganteum</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Allium</h3>
+                <p class="flower-family">Amaryllidaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Ornamental</span>
+            <span class="tag">#Sphere</span>
+          </div>
+        </div>
+
+        <!-- Карточка 43: Fritillaria -->
+        <div class="flower-card" data-flower-id="43">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2020/03/31/10/58/fritillaria-meleagris-4987195_1280.jpg"
+              alt="Fritillaria" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Fritillaria imperialis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Fritillaria</h3>
+                <p class="flower-family">Liliaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Unique</span>
+            <span class="tag">#Crown</span>
+          </div>
+        </div>
+
+        <!-- Карточка 44: Anemone -->
+        <div class="flower-card" data-flower-id="44">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2022/03/17/15/45/flower-7074909_1280.jpg" alt="Anemone"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Anemone blanda</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Anemone</h3>
+                <p class="flower-family">Ranunculaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Woodland</span>
+            <span class="tag">#Blue</span>
+          </div>
+        </div>
+
+        <!-- Карточка 45: Scilla -->
+        <div class="flower-card" data-flower-id="45">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2015/03/29/21/45/bluebells-697755_1280.jpg" alt="Scilla"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Scilla siberica</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Scilla</h3>
+                <p class="flower-family">Asparagaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Early</span>
+            <span class="tag">#Blue</span>
+          </div>
+        </div>
+
+        <!-- Карточка 46: Muscari -->
+        <div class="flower-card" data-flower-id="46">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2024/04/06/06/44/common-grape-hyacinth-8678749_1280.jpg"
+              alt="Muscari" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Muscari armeniacum</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Muscari</h3>
+                <p class="flower-family">Asparagaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Grape</span>
+            <span class="tag">#Spring</span>
+          </div>
+        </div>
+
+        <!-- Карточка 47: Columbine -->
+        <div class="flower-card" data-flower-id="47">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2021/02/10/08/44/columbine-6001350_1280.jpg" alt="Columbine"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Aquilegia vulgaris</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Columbine</h3>
+                <p class="flower-family">Ranunculaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Woodland</span>
+            <span class="tag">#Unique</span>
+          </div>
+        </div>
+
+        <!-- Карточка 48: Bleeding Heart -->
+        <div class="flower-card" data-flower-id="48">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2016/05/30/22/02/bleeding-heart-1425870_1280.jpg"
+              alt="Bleeding Heart" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Lamprocapnos spectabilis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Bleeding Heart</h3>
+                <p class="flower-family">Papaveraceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Shade</span>
+            <span class="tag">#Romantic</span>
+          </div>
+        </div>
+
+        <!-- Карточка 49: Hosta -->
+        <div class="flower-card" data-flower-id="49">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2019/03/23/18/22/plant-4075919_1280.jpg" alt="Hosta"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Hosta sieboldiana</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Hosta</h3>
+                <p class="flower-family">Asparagaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Shade</span>
+            <span class="tag">#Foliage</span>
+          </div>
+        </div>
+
+        <!-- Карточка 50: Astilbe -->
+        <div class="flower-card" data-flower-id="50">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2019/08/17/16/14/astilbe-4412537_1280.jpg" alt="Astilbe"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Astilbe chinensis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Astilbe</h3>
+                <p class="flower-family">Saxifragaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Shade</span>
+            <span class="tag">#Feathery</span>
+          </div>
+        </div>
+
+        <!-- Карточка 51: Lupine -->
+        <div class="flower-card" data-flower-id="51">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2022/07/10/12/44/large-leaved-lupine-7312789_1280.jpg" alt="Lupine"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Lupinus polyphyllus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Lupine</h3>
+                <p class="flower-family">Fabaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Tall</span>
+            <span class="tag">#Nitrogen</span>
+          </div>
+        </div>
+
+        <!-- Карточка 52: Salvia -->
+        <div class="flower-card" data-flower-id="52">
+          <div class="card-image-container">
+            <img src="http://cdn.pixabay.com/photo/2016/04/16/12/39/red-salvia-1332975_1280.jpg" alt="Salvia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Salvia splendens</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Salvia</h3>
+                <p class="flower-family">Lamiaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Heat</span>
+            <span class="tag">#Hummingbird</span>
+          </div>
+        </div>
+
+        <!-- Карточка 53: Verbena -->
+        <div class="flower-card" data-flower-id="53">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2012/10/15/12/16/verbena-61242_1280.jpg" alt="Verbena"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Verbena bonariensis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Verbena</h3>
+                <p class="flower-family">Verbenaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Butterfly</span>
+            <span class="tag">#Tall</span>
+          </div>
+        </div>
+
+        <!-- Карточка 54: Phlox -->
+        <div class="flower-card" data-flower-id="54">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2024/08/15/08/27/phlox-8970559_1280.jpg" alt="Phlox"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Phlox paniculata</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Phlox</h3>
+                <p class="flower-family">Polemoniaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Fragrant</span>
+            <span class="tag">#Summer</span>
+          </div>
+        </div>
+
+        <!-- Карточка 55: Coneflower -->
+        <div class="flower-card" data-flower-id="55">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2026/02/13/12/01/nowaja-rudbeckia-10121000_1280.jpg"
+              alt="Coneflower" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Echinacea purpurea</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Coneflower</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Medicinal</span>
+            <span class="tag">#Drought</span>
+          </div>
+        </div>
+
+        <!-- Карточка 56: Black-eyed Susan -->
+        <div class="flower-card" data-flower-id="56">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2016/05/06/04/58/rudbeckia-1375286_1280.jpg" alt="Black-eyed Susan"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Rudbeckia hirta</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Black-eyed Susan</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Native</span>
+            <span class="tag">#Cheerful</span>
+          </div>
+        </div>
+
+        <!-- Карточка 57: Coreopsis -->
+        <div class="flower-card" data-flower-id="57">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2024/02/01/18/53/cosmos-8546570_1280.jpg" alt="Coreopsis"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Coreopsis grandiflora</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Coreopsis</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Long-bloom</span>
+            <span class="tag">#Drought</span>
+          </div>
+        </div>
+
+        <!-- Карточка 58: Gaillardia -->
+        <div class="flower-card" data-flower-id="58">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2020/07/13/18/10/blanket-flower-5401617_1280.jpg" alt="Gaillardia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Gaillardia aristata</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Gaillardia</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Blanket</span>
+            <span class="tag">#Heat</span>
+          </div>
+        </div>
+
+        <!-- Карточка 59: Yarrow -->
+        <div class="flower-card" data-flower-id="59">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2020/03/04/02/48/fernleaf-4900358_1280.jpg" alt="Yarrow"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Achillea millefolium</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Yarrow</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Medicinal</span>
+            <span class="tag">#Drought</span>
+          </div>
+        </div>
+
+        <!-- Карточка 60: Sedum -->
+        <div class="flower-card" data-flower-id="60">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2017/08/25/01/24/pink-2678918_1280.jpg" alt="Sedum"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Hylotelephium spectabile</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Sedum</h3>
+                <p class="flower-family">Crassulaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Succulent</span>
+            <span class="tag">#Fall</span>
+          </div>
+        </div>
+
+        <!-- Карточка 61: Hellebore -->
+        <div class="flower-card" data-flower-id="61">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2020/01/30/21/17/helleborus-orientalis-4806589_1280.jpg"
+              alt="Hellebore" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Helleborus orientalis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Hellebore</h3>
+                <p class="flower-family">Ranunculaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Winter</span>
+            <span class="tag">#Shade</span>
+          </div>
+        </div>
+
+        <!-- Карточка 62: Primrose -->
+        <div class="flower-card" data-flower-id="62">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2018/04/06/19/10/primrose-3296578_1280.jpg" alt="Primrose"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Primula vulgaris</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Primrose</h3>
+                <p class="flower-family">Primulaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Early</span>
+            <span class="tag">#Woodland</span>
+          </div>
+        </div>
+
+        <!-- Карточка 63: Pulmonaria -->
+        <div class="flower-card" data-flower-id="63">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2018/04/30/17/58/lungwort-3363477_1280.jpg" alt="Pulmonaria"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Pulmonaria officinalis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Pulmonaria</h3>
+                <p class="flower-family">Boraginaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Shade</span>
+            <span class="tag">#Spotted</span>
+          </div>
+        </div>
+
+        <!-- Карточка 64: Brunnera -->
+        <div class="flower-card" data-flower-id="64">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2016/05/01/20/44/forget-me-not-1365858_1280.jpg" alt="Brunnera"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Brunnera macrophylla</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Brunnera</h3>
+                <p class="flower-family">Boraginaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Shade</span>
+            <span class="tag">#Forget-me-not</span>
+          </div>
+        </div>
+
+        <!-- Карточка 65: Dicentra -->
+        <div class="flower-card" data-flower-id="65">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2021/05/15/13/13/bleeding-hearts-6255725_1280.jpg" alt="Dicentra"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Dicentra formosa</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Dicentra</h3>
+                <p class="flower-family">Papaveraceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Shade</span>
+            <span class="tag">#Heart</span>
+          </div>
+        </div>
+
+        <!-- Карточка 66: Epimedium -->
+        <div class="flower-card" data-flower-id="66">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2024/04/21/10/16/elven-flower-8710247_1280.jpg" alt="Epimedium"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Epimedium grandiflorum</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Epimedium</h3>
+                <p class="flower-family">Berberidaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Groundcover</span>
+            <span class="tag">#Shade</span>
+          </div>
+        </div>
+
+        <!-- Карточка 67: Tiarella -->
+        <div class="flower-card" data-flower-id="67">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2017/05/17/06/33/tiarella-2320054_1280.jpg" alt="Tiarella"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Tiarella cordifolia</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Tiarella</h3>
+                <p class="flower-family">Saxifragaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Foamflower</span>
+            <span class="tag">#Native</span>
+          </div>
+        </div>
+
+        <!-- Карточка 68: Heuchera -->
+        <div class="flower-card" data-flower-id="68">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2012/09/04/20/46/coral-bells-56056_1280.jpg" alt="Heuchera"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Heuchera americana</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Heuchera</h3>
+                <p class="flower-family">Saxifragaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Coral Bells</span>
+            <span class="tag">#Foliage</span>
+          </div>
+        </div>
+
+        <!-- Карточка 69: Bergenia -->
+        <div class="flower-card" data-flower-id="69">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2023/05/16/06/43/bergenie-7996665_1280.jpg" alt="Bergenia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Bergenia cordifolia</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Bergenia</h3>
+                <p class="flower-family">Saxifragaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Evergreen</span>
+            <span class="tag">#Pigsqueak</span>
+          </div>
+        </div>
+
+        <!-- Карточка 70: Rodgersia -->
+        <div class="flower-card" data-flower-id="70">
+          <div class="card-image-container">
+            <img
+              src="https://cdn11.bigcommerce.com/s-i7i23daso6/images/stencil/1280x1280/products/9107/13832/Rodgersia_pinnata_Superba_0011244__57034.1623342831.jpg?c=1"
+              alt="Rodgersia" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Rodgersia pinnata</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Rodgersia</h3>
+                <p class="flower-family">Saxifragaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Bold</span>
+            <span class="tag">#Moist</span>
+          </div>
+        </div>
+
+        <!-- Карточка 71: Ligularia -->
+        <div class="flower-card" data-flower-id="71">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2021/08/18/15/00/ligularia-6555770_1280.jpg" alt="Ligularia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Ligularia dentata</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Ligularia</h3>
+                <p class="flower-family">Asteraceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Moist</span>
+            <span class="tag">#Shade</span>
+          </div>
+        </div>
+
+        <!-- Карточка 73: Gunnera -->
+        <div class="flower-card" data-flower-id="73">
+          <div class="card-image-container">
+            <img
+              src="https://dpdgay9x1sxad.cloudfront.net/biodiversity/wp-content/uploads/sites/16/2016/11/photo3-scaled.jpg"
+              alt="Gunnera" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Gunnera manicata</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Gunnera</h3>
+                <p class="flower-family">Gunneraceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Giant</span>
+            <span class="tag">#Prehistoric</span>
+          </div>
+        </div>
+
+        <!-- Карточка 76: Lotus -->
+        <div class="flower-card" data-flower-id="76">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2016/11/21/13/51/flower-1845520_1280.jpg" alt="Lotus"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Nelumbo nucifera</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Lotus</h3>
+                <p class="flower-family">Nelumbonaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Water</span>
+            <span class="tag">#Sacred</span>
+          </div>
+        </div>
+
+        <!-- Карточка 77: Water Lily -->
+        <div class="flower-card" data-flower-id="77">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2023/04/13/02/27/flower-7921519_1280.jpg" alt="Water Lily"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Nymphaea alba</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Water Lily</h3>
+                <p class="flower-family">Nymphaeaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Pond</span>
+            <span class="tag">#Peaceful</span>
+          </div>
+        </div>
+
+        <!-- Карточка 78: Calla Lily -->
+        <div class="flower-card" data-flower-id="78">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2023/02/27/15/31/flower-7818740_1280.jpg" alt="Calla Lily"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Zantedeschia aethiopica</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Calla Lily</h3>
+                <p class="flower-family">Araceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Elegant</span>
+            <span class="tag">#Wedding</span>
+          </div>
+        </div>
+
+        <!-- Карточка 79: Anthurium -->
+        <div class="flower-card" data-flower-id="79">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2016/04/19/15/40/anthurium-1338920_1280.jpg" alt="Anthurium"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Anthurium andraeanum</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Anthurium</h3>
+                <p class="flower-family">Araceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Tropical</span>
+            <span class="tag">#Indoor</span>
+          </div>
+        </div>
+
+        <!-- Карточка 80: Bird of Paradise -->
+        <div class="flower-card" data-flower-id="80">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2013/09/19/06/54/flower-183693_1280.jpg" alt="Bird of Paradise"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Strelitzia reginae</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Bird of Paradise</h3>
+                <p class="flower-family">Strelitziaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Exotic</span>
+            <span class="tag">#Tropical</span>
+          </div>
+        </div>
+
+
+
+        <!-- Карточка 82: Banksia -->
+        <div class="flower-card" data-flower-id="82">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2023/03/17/13/03/banksia-menziesii-7858608_1280.jpg" alt="Banksia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Banksia serrata</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Banksia</h3>
+                <p class="flower-family">Proteaceae</p>
+              </div>
+              <span class="difficulty-badge">Difficult</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Australian</span>
+            <span class="tag">#Native</span>
+          </div>
+        </div>
+
+        <!-- Карточка 83: Grevillea -->
+        <div class="flower-card" data-flower-id="83">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2015/08/09/12/54/grevillea-881534_1280.jpg" alt="Grevillea"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Grevillea robusta</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Grevillea</h3>
+                <p class="flower-family">Proteaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Spider</span>
+            <span class="tag">#Nectar</span>
+          </div>
+        </div>
+
+        <!-- Карточка 84: Plumeria -->
+        <div class="flower-card" data-flower-id="84">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2023/06/04/11/59/flower-8039496_1280.jpg" alt="Plumeria"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Plumeria rubra</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Plumeria</h3>
+                <p class="flower-family">Apocynaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Lei</span>
+            <span class="tag">#Hawaii</span>
+          </div>
+        </div>
+
+        <!-- Карточка 85: Bougainvillea -->
+        <div class="flower-card" data-flower-id="85">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2016/09/26/16/08/bougainvillea-1696303_1280.jpg" alt="Bougainvillea"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Bougainvillea spectabilis</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Bougainvillea</h3>
+                <p class="flower-family">Nyctaginaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Climbing</span>
+            <span class="tag">#Vibrant</span>
+          </div>
+        </div>
+
+        <!-- Карточка 86: Mandevilla -->
+        <div class="flower-card" data-flower-id="86">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2012/10/05/03/08/mandevilla-59754_1280.jpg" alt="Mandevilla"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Mandevilla sanderi</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Mandevilla</h3>
+                <p class="flower-family">Apocynaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Vine</span>
+            <span class="tag">#Trumpet</span>
+          </div>
+        </div>
+
+        <!-- Карточка 87: Allamanda -->
+        <div class="flower-card" data-flower-id="87">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2016/02/09/21/07/flowers-1190450_1280.jpg" alt="Allamanda"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Allamanda cathartica</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Allamanda</h3>
+                <p class="flower-family">Apocynaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Yellow</span>
+            <span class="tag">#Tropical</span>
+          </div>
+        </div>
+
+        <!-- Карточка 88: Ixora -->
+        <div class="flower-card" data-flower-id="88">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2021/08/21/02/19/ixora-6561652_1280.jpg" alt="Ixora"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Ixora coccinea</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Ixora</h3>
+                <p class="flower-family">Rubiaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Cluster</span>
+            <span class="tag">#Evergreen</span>
+          </div>
+        </div>
+
+        <!-- Карточка 89: Pentas -->
+        <div class="flower-card" data-flower-id="89">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2018/02/14/23/23/nature-3154136_1280.jpg" alt="Pentas"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Pentas lanceolata</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Pentas</h3>
+                <p class="flower-family">Rubiaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Star</span>
+            <span class="tag">#Hummingbird</span>
+          </div>
+        </div>
+
+        <!-- Карточка 90: Lantana -->
+        <div class="flower-card" data-flower-id="90">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2022/09/28/17/06/flower-7485508_1280.jpg" alt="Lantana"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Lantana camara</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Lantana</h3>
+                <p class="flower-family">Verbenaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Color-change</span>
+            <span class="tag">#Butterfly</span>
+          </div>
+        </div>
+
+        <!-- Карточка 91: Portulaca -->
+        <div class="flower-card" data-flower-id="91">
+          <div class="card-image-container">
+            <img
+              src="https://lh6.googleusercontent.com/proxy/khQRf3BCl8_Jv5BU1PZVuN3g82an70aQ0OPEmWdj1SFSO6-f-B79VqWxCAJpuaISP1ynpwMT2BXwy3UMTbjsZYyaBPYrscm5-shxnmXxsaD0xWotoV6MsR9hJq0G"
+              alt="Portulaca" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Portulaca grandiflora</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Portulaca</h3>
+                <p class="flower-family">Portulacaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Succulent</span>
+            <span class="tag">#Sun</span>
+          </div>
+        </div>
+
+        <!-- Карточка 92: Celosia -->
+        <div class="flower-card" data-flower-id="92">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2021/08/11/16/29/cockscomb-6538914_1280.jpg" alt="Celosia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Celosia argentea</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Celosia</h3>
+                <p class="flower-family">Amaranthaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Plume</span>
+            <span class="tag">#Heat</span>
+          </div>
+        </div>
+
+        <!-- Карточка 93: Amaranthus -->
+        <div class="flower-card" data-flower-id="93">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2022/03/01/13/38/edible-amaranth-7041330_1280.jpg" alt="Amaranthus"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Amaranthus caudatus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Amaranthus</h3>
+                <p class="flower-family">Amaranthaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Love-lies</span>
+            <span class="tag">#Dried</span>
+          </div>
+        </div>
+
+        <!-- Карточка 94: Nicotiana -->
+        <div class="flower-card" data-flower-id="94">
+          <div class="card-image-container">
+            <img
+              src="https://images.immediate.co.uk/production/volatile/sites/10/2018/02/5a24287a-0f16-4e04-b93d-17b914ca52a7-2f54237.jpg?quality=90&webp=true&resize=1200,800"
+              alt="Nicotiana" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Nicotiana alata</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Nicotiana</h3>
+                <p class="flower-family">Solanaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Fragrant</span>
+            <span class="tag">#Night</span>
+          </div>
+        </div>
+
+        <!-- Карточка 95: Petunia -->
+        <div class="flower-card" data-flower-id="95">
+          <div class="card-image-container">
+            <img
+              src="https://www.picturethisai.com/image-handle/website_cmsname/image/1080/153927247063941147.jpeg?x-oss-process=image/format,webp/resize,s_300&v=1.0"
+              alt="Petunia" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Petunia hybrida</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Petunia</h3>
+                <p class="flower-family">Solanaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Bedding</span>
+            <span class="tag">#Trailing</span>
+          </div>
+        </div>
+
+        <!-- Карточка 96: Impatiens -->
+        <div class="flower-card" data-flower-id="96">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2016/07/19/20/06/himalayan-impatiens-1528844_1280.jpg"
+              alt="Impatiens" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Impatiens walleriana</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Impatiens</h3>
+                <p class="flower-family">Balsaminaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Shade</span>
+            <span class="tag">#Busy Lizzie</span>
+          </div>
+        </div>
+
+        <!-- Карточка 97: Nemesia -->
+        <div class="flower-card" data-flower-id="97">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2022/07/18/16/45/nemesia-7330385_1280.jpg" alt="Nemesia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Nemesia strumosa</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Nemesia</h3>
+                <p class="flower-family">Scrophulariaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Cool</span>
+            <span class="tag">#Fragrant</span>
+          </div>
+        </div>
+
+        <!-- Карточка 98: Lobelia -->
+        <div class="flower-card" data-flower-id="98">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2019/03/30/21/25/lobelia-4092093_1280.jpg" alt="Lobelia"
+              class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Lobelia erinus</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Lobelia</h3>
+                <p class="flower-family">Campanulaceae</p>
+              </div>
+              <span class="difficulty-badge">Moderate</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Edging</span>
+            <span class="tag">#Blue</span>
+          </div>
+        </div>
+
+
+
+        <!-- Карточка 100: Forget-me-not -->
+        <div class="flower-card" data-flower-id="100">
+          <div class="card-image-container">
+            <img src="https://cdn.pixabay.com/photo/2017/05/12/22/23/forget-me-not-forest-2308297_1280.jpg"
+              alt="Forget-me-not" class="card-image">
+            <div class="image-overlay"></div>
+            <div class="scientific-name">
+              <p>Myosotis sylvatica</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3 class="flower-name">Forget-me-not</h3>
+                <p class="flower-family">Boraginaceae</p>
+              </div>
+              <span class="difficulty-badge">Easy</span>
+            </div>
+          </div>
+          <div class="tags-container">
+            <span class="tag">#Blue</span>
+            <span class="tag">#Cottage</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="site-footer" id="contacts">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- О проекте -->
+          <div>
+            <h4 class="footer-title">Flora Encyclopedia</h4>
+            <p class="footer-text">Откройте для себя удивительный мир растений с нашей энциклопедией. Тысячи видов с
+              подробным описанием и фотографиями.</p>
+          </div>
+
+          <!-- Навигация -->
+          <div>
+            <h4 class="footer-subtitle">Навигация</h4>
+            <ul class="footer-links">
+              <li><a href="main.html">Главная</a></li>
+              <li><a href="collection.html">Коллекция</a></li>
+              <li><a href="about.html">О проекте</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </div>
+
+          <!-- Контакты -->
+          <div>
+            <h4 class="footer-subtitle">Контакты</h4>
+            <ul class="footer-links">
+              <li class="contact-info">📧 sqrtofdaniyar@gmail.com</li>
+              <li class="contact-info">📞 +7 (702)-644-19-48</li>
+              <li class="contact-info">📍 Астана, ул. Туран, 23</li>
+            </ul>
+          </div>
+
+          <!-- Соцсети -->
+          <div>
+            <h4 class="footer-subtitle">Мы в соцсетях</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">📘</a>
+              <a href="#" class="social-link">📷</a>
+              <a href="#" class="social-link">🐦</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Копирайт -->
+        <div class="footer-bottom">
+          © 2026 Flora Encyclopedia. Все права защищены.
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>О проекте - Flora Encyclopedia</title>
+    <meta name="theme-color" content="#2d6a4f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/png" href="flower-encyclopedia--daniyarasanov20.replit.app_files/assets/logo/logo.png">
+    <link rel="apple-touch-icon" href="flower-encyclopedia--daniyarasanov20.replit.app_files/assets/logo/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-section {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 5rem 1rem;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-header h1 {
+            font-size: 3.75rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .about-header p {
+            font-size: 1.25rem;
+            color: rgba(30, 41, 59, 0.8);
+            max-width: 42rem;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .mission-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 0.75rem;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-section h2 {
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #2d6a4f;
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2d6a4f;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .team-section {
+            margin-bottom: 3rem;
+        }
+
+        .team-section h2 {
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #1e293b;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .member-role {
+            color: #2d6a4f;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .member-bio {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(45, 106, 79, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .about-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .mission-section {
+                padding: 2rem;
+            }
+
+            .mission-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-primary">Flora</span>
+                <span class="logo-secondary">Encyclopedia</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
+                <a href="main.html" class="nav-link">Главная</a>
+                <a href="collection.html" class="nav-link">Коллекция</a>
+                <a href="about.html" class="nav-link">О проекте</a>
+                <a href="main.html#contacts" class="nav-link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <!-- Заголовок -->
+            <div class="about-header">
+                <h1>О проекте Flora Encyclopedia</h1>
+                <p>Открываем удивительный мир растений вместе</p>
+            </div>
+
+            <!-- Миссия -->
+            <div class="mission-section">
+                <h2>Наша миссия</h2>
+                <p>Flora Encyclopedia создана для того, чтобы сделать знания о растениях доступными каждому. Мы верим,
+                    что понимание мира флоры помогает людям лучше заботиться о природе и находить в ней вдохновение.</p>
+                <p>Наша команда ботаников, фотографов и разработчиков работает над тем, чтобы собрать самую полную и
+                    точную информацию о растениях со всего мира. Каждое описание, каждая фотография проходят тщательную
+                    проверку.</p>
+            </div>
+
+            <!-- Статистика -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Видов растений</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Экспертов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Доступ к знаниям</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Проверенная информация</div>
+                </div>
+            </div>
+
+            <!-- Команда -->
+            <div class="team-section">
+                <h2>Наша команда</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">🌿</div>
+                        <div class="member-name">Данияр Асанов</div>
+                        <div class="member-role">Главный ботаник</div>
+                        <div class="member-bio">Кандидат биологических наук, специалист по тропическим растениям</div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar">📸</div>
+                        <div class="member-name">Данияр Асанов</div>
+                        <div class="member-role">Фотограф</div>
+                        <div class="member-bio">Путешествует по миру, чтобы запечатлеть редкие виды в естественной среде
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar">💻</div>
+                        <div class="member-name">Данияр Асанов</div>
+                        <div class="member-role">Разработчик</div>
+                        <div class="member-bio">Создает удобный и красивый интерфейс для любителей растений</div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar">📚</div>
+                        <div class="member-name">Данияр Асанов</div>
+                        <div class="member-role">Редактор</div>
+                        <div class="member-bio">Отвечает за точность описаний и научную достоверность</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопка возврата -->
+            <div class="back-home">
+                <a href="main.html" class="back-button">← Вернуться на главную</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="site-footer" id="contacts">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- О проекте -->
+                <div>
+                    <h4 class="footer-title">Flora Encyclopedia</h4>
+                    <p class="footer-text">Откройте для себя удивительный мир растений с нашей энциклопедией. Тысячи
+                        видов с
+                        подробным описанием и фотографиями.</p>
+                </div>
+
+                <!-- Навигация -->
+                <div>
+                    <h4 class="footer-subtitle">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="main.html">Главная</a></li>
+                        <li><a href="collection.html">Коллекция</a></li>
+                        <li><a href="about.html">О проекте</a></li>
+                        <li><a href="main.html#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <!-- Контакты -->
+                <div>
+                    <h4 class="footer-subtitle">Контакты</h4>
+                    <ul class="footer-links">
+                        <li class="contact-info">📧 sqrtofdaniyar@gmail.com</li>
+                        <li class="contact-info">📞 +7 (702)-644-19-48</li>
+                        <li class="contact-info">📍 Астана, ул. Туран, 23</li>
+                    </ul>
+                </div>
+
+                <!-- Соцсети -->
+                <div>
+                    <h4 class="footer-subtitle">Мы в соцсетях</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Копирайт -->
+            <div class="footer-bottom">
+                © 2026 Flora Encyclopedia. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
