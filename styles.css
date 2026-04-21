@@ -977,6 +977,57 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .search-input {
+        -webkit-appearance: none;
+        appearance: none;
+        font-size: 16px !important;
+        /* Предотвращает зум на iOS */
+    }
+
+    .flower-card {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        will-change: transform, opacity;
+        transition: opacity 0.2s ease-out, transform 0.2s ease-out !important;
+    }
+
+    /* Убираем задержки для лучшего отклика */
+    .flower-card[style*="display: none"] {
+        transition: none !important;
+    }
+
+    .season-filter {
+        position: sticky;
+        top: 60px;
+        background: rgba(248, 249, 250, 0.95);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+}
+
+/* Стили для сообщения об отсутствии результатов */
+.no-results-message {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
+    font-size: 1.1rem;
+    grid-column: 1 / -1;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Очень маленькие экраны (до 360px) */
 @media (max-width: 360px) {
     .hero-title {

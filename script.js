@@ -73,67 +73,219 @@ function initSearchFunctionality() {
 
     if (!searchInput) return;
 
-    let searchTimeout;
-    let lastSearchTerm = '';
+    // Определяем, находимся ли мы на странице коллекции
+    const isCollectionPage = document.querySelector('.season-filter') !== null;
 
-    // Функция выполнения поиска
+    // Функция поиска
     function performSearch(searchTerm) {
         const cards = document.querySelectorAll('.flower-card');
         const normalizedTerm = searchTerm.toLowerCase().trim();
+
+        // Удаляем старые сообщения об отсутствии результатов
+        document.querySelectorAll('.no-results-message').forEach(msg => msg.remove());
+
+        // Счетчик видимых карточек для каждой секции
+        const visibleCardsBySection = new Map();
 
         cards.forEach(card => {
             const flowerName = card.querySelector('.flower-name')?.textContent.toLowerCase() || '';
             const family = card.querySelector('.flower-family')?.textContent.toLowerCase() || '';
             const scientificName = card.querySelector('.scientific-name p')?.textContent.toLowerCase() || '';
+            const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
 
-            let isMatch = normalizedTerm === '' ||
-                flowerName.includes(normalizedTerm) ||
-                family.includes(normalizedTerm) ||
-                scientificName.includes(normalizedTerm);
+            let isMatch = false;
 
-            // Поиск по тегам
-            if (!isMatch) {
-                const tags = Array.from(card.querySelectorAll('.tag'));
-                isMatch = tags.some(tag =>
-                    tag.textContent.toLowerCase().includes(normalizedTerm)
-                );
+            if (normalizedTerm === '') {
+                isMatch = true;
+            } else if (normalizedTerm.length === 1) {
+                // Поиск по первой букве
+                isMatch = flowerName.charAt(0) === normalizedTerm;
+            } else {
+                // Полный поиск
+                isMatch = flowerName.includes(normalizedTerm) ||
+                    family.includes(normalizedTerm) ||
+                    scientificName.includes(normalizedTerm) ||
+                    tags.some(tag => tag.includes(normalizedTerm));
             }
 
-            card.style.display = isMatch ? 'block' : 'none';
+            // Для страницы коллекции проверяем активный сезон
+            let shouldShow = isMatch;
+
+            if (isCollectionPage) {
+                const seasonSection = card.closest('.season-section');
+                const isActiveSeason = seasonSection ? seasonSection.classList.contains('active') : false;
+                shouldShow = isMatch && isActiveSeason;
+
+                // Считаем видимые карточки по секциям
+                if (shouldShow && seasonSection) {
+                    const seasonId = seasonSection.id;
+                    visibleCardsBySection.set(seasonId, (visibleCardsBySection.get(seasonId) || 0) + 1);
+                }
+            }
+
+            // Применяем видимость без анимаций для лучшей производительности на мобильных
+            if (shouldShow) {
+                card.style.display = 'block';
+                // Используем requestAnimationFrame для плавности
+                requestAnimationFrame(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                });
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                // Уменьшаем задержку для мобильных
+                setTimeout(() => {
+                    if (card.style.opacity === '0') {
+                        card.style.display = 'none';
+                    }
+                }, 200);
+            }
         });
 
-        showNoResultsMessage(normalizedTerm, cards);
+        // Показываем сообщение, если ничего не найдено
+        if (normalizedTerm !== '') {
+            if (isCollectionPage) {
+                // Для страницы коллекции показываем сообщение в активной секции
+                const activeSection = document.querySelector('.season-section.active');
+                if (activeSection) {
+                    const sectionId = activeSection.id;
+                    const visibleCount = visibleCardsBySection.get(sectionId) || 0;
+
+                    if (visibleCount === 0) {
+                        const grid = activeSection.querySelector('.flower-grid');
+                        if (grid) {
+                            const noResultsMsg = document.createElement('div');
+                            noResultsMsg.className = 'no-results-message';
+                            noResultsMsg.textContent = `По запросу "${searchTerm}" ничего не найдено`;
+                            noResultsMsg.style.cssText = `
+                                text-align: center;
+                                padding: 2rem;
+                                color: #64748b;
+                                font-size: 1.1rem;
+                                grid-column: 1 / -1;
+                            `;
+                            grid.appendChild(noResultsMsg);
+                        }
+                    }
+                }
+            } else {
+                // Для главной страницы
+                const visibleCards = Array.from(cards).filter(card => card.style.display !== 'none');
+                if (visibleCards.length === 0) {
+                    const grid = document.querySelector('.flower-grid');
+                    if (grid) {
+                        const noResultsMsg = document.createElement('div');
+                        noResultsMsg.className = 'no-results-message';
+                        noResultsMsg.textContent = `По запросу "${searchTerm}" ничего не найдено`;
+                        noResultsMsg.style.cssText = `
+                            text-align: center;
+                            padding: 2rem;
+                            color: #64748b;
+                            font-size: 1.1rem;
+                            grid-column: 1 / -1;
+                        `;
+                        grid.appendChild(noResultsMsg);
+                    }
+                }
+            }
+        }
     }
 
-    // Обработчик ввода
-    function handleInput(e) {
+    // Обработчик ввода с debounce
+    let searchTimeout;
+
+    function handleSearch(e) {
         const searchTerm = e.target.value;
 
         clearTimeout(searchTimeout);
 
         searchTimeout = setTimeout(() => {
-            if (searchTerm !== lastSearchTerm) {
-                lastSearchTerm = searchTerm;
-                performSearch(searchTerm);
-            }
-        }, 200);
+            performSearch(searchTerm);
+        }, 250); // Уменьшаем задержку для лучшего отклика на мобильных
     }
 
-    // Добавляем все необходимые слушатели
-    ['input', 'change', 'keyup', 'search'].forEach(eventType => {
-        searchInput.addEventListener(eventType, handleInput);
+    // Добавляем обработчики событий
+    searchInput.addEventListener('input', handleSearch);
+    searchInput.addEventListener('search', handleSearch); // Для мобильных браузеров
+
+    // Обработка Enter на мобильных
+    searchInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            performSearch(this.value);
+        }
     });
 
-    // Специфичная обработка для мобильных браузеров
-    if ('ontouchstart' in window) {
-        searchInput.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                performSearch(this.value);
-            }
+    // Очистка поиска при фокусе (удобно на мобильных)
+    searchInput.addEventListener('focus', function () {
+        this.select();
+    });
+}
+
+// Обновленная функция инициализации сезонных фильтров
+function initSeasonFilter() {
+    const seasonBtns = document.querySelectorAll('.season-btn');
+    const seasonSections = document.querySelectorAll('.season-section');
+    const searchInput = document.querySelector('.search-input');
+
+    if (!seasonBtns.length || !seasonSections.length) return;
+
+    function switchSeason(season) {
+        // Обновляем активную кнопку
+        seasonBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.season === season);
         });
+
+        // Обновляем активную секцию
+        seasonSections.forEach(section => {
+            section.classList.toggle('active', section.id === season);
+        });
+
+        // Сбрасываем поиск при переключении сезона
+        if (searchInput) {
+            searchInput.value = '';
+            // Триггерим событие поиска для обновления отображения
+            searchInput.dispatchEvent(new Event('input'));
+        }
+    }
+
+    seasonBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const season = btn.dataset.season;
+            switchSeason(season);
+
+            // Обновляем URL хеш для возможности прямых ссылок
+            history.replaceState(null, '', `#${season}`);
+        });
+    });
+
+    // Проверяем хеш при загрузке
+    const hash = window.location.hash.slice(1);
+    if (hash && ['spring', 'summer', 'autumn', 'winter'].includes(hash)) {
+        switchSeason(hash);
     }
 }
+
+// Обновленная инициализация в DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function () {
+    // Инициализируем сезонные фильтры
+    initSeasonFilter();
+
+    // Загружаем описания и инициализируем остальное
+    loadDescriptions().then(() => {
+        initScrollAnimations();
+        initSearchFunctionality();
+        initCardClickHandlers();
+        initBurgerMenu();
+    }).catch(error => {
+        console.error('Ошибка загрузки описаний:', error);
+        initScrollAnimations();
+        initSearchFunctionality();
+        initCardClickHandlers();
+        initBurgerMenu();
+    });
+});
 
 function initCardClickHandlers() {
     const cards = document.querySelectorAll('.flower-card');
