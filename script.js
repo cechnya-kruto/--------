@@ -70,65 +70,68 @@ function initScrollAnimations() {
 
 function initSearchFunctionality() {
     const searchInput = document.querySelector('.search-input');
-    const cards = document.querySelectorAll('.flower-card');
 
-    if (searchInput) {
-        searchInput.addEventListener('input', debounce(function (e) {
-            const searchTerm = e.target.value.toLowerCase().trim();
+    if (!searchInput) return;
 
-            cards.forEach(card => {
-                const flowerName = card.querySelector('.flower-name')?.textContent.toLowerCase() || '';
-                const family = card.querySelector('.flower-family')?.textContent.toLowerCase() || '';
-                const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
-                const scientificName = card.querySelector('.scientific-name p')?.textContent.toLowerCase() || '';
+    let searchTimeout;
+    let lastSearchTerm = '';
 
-                let isMatch = false;
+    // Функция выполнения поиска
+    function performSearch(searchTerm) {
+        const cards = document.querySelectorAll('.flower-card');
+        const normalizedTerm = searchTerm.toLowerCase().trim();
 
-                if (searchTerm === '') {
-                    card.style.display = 'block';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                    return;
-                }
+        cards.forEach(card => {
+            const flowerName = card.querySelector('.flower-name')?.textContent.toLowerCase() || '';
+            const family = card.querySelector('.flower-family')?.textContent.toLowerCase() || '';
+            const scientificName = card.querySelector('.scientific-name p')?.textContent.toLowerCase() || '';
 
-                // Если введена одна буква — ищем только по первой букве названия
-                if (searchTerm.length === 1) {
-                    isMatch = flowerName.charAt(0) === searchTerm;
-                } else {
-                    // При вводе 2+ букв — обычный поиск по всем полям
-                    isMatch = flowerName.includes(searchTerm) ||
-                        family.includes(searchTerm) ||
-                        tags.some(tag => tag.includes(searchTerm)) ||
-                        scientificName.includes(searchTerm);
-                }
+            let isMatch = normalizedTerm === '' ||
+                flowerName.includes(normalizedTerm) ||
+                family.includes(normalizedTerm) ||
+                scientificName.includes(normalizedTerm);
 
-                // На странице collection.html учитываем активный сезон
-                const isActiveSeason = card.closest('.season-section')?.classList.contains('active');
-                const isOnCollectionPage = document.querySelector('.season-filter') !== null;
+            // Поиск по тегам
+            if (!isMatch) {
+                const tags = Array.from(card.querySelectorAll('.tag'));
+                isMatch = tags.some(tag =>
+                    tag.textContent.toLowerCase().includes(normalizedTerm)
+                );
+            }
 
-                if (isOnCollectionPage && !isActiveSeason) {
-                    card.style.display = 'none';
-                    card.style.opacity = '0';
-                    return;
-                }
+            card.style.display = isMatch ? 'block' : 'none';
+        });
 
-                if (isMatch) {
-                    card.style.display = 'block';
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 10);
-                } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 300);
-                }
-            });
+        showNoResultsMessage(normalizedTerm, cards);
+    }
 
-            showNoResultsMessage(searchTerm, cards);
-        }, 300));
+    // Обработчик ввода
+    function handleInput(e) {
+        const searchTerm = e.target.value;
+
+        clearTimeout(searchTimeout);
+
+        searchTimeout = setTimeout(() => {
+            if (searchTerm !== lastSearchTerm) {
+                lastSearchTerm = searchTerm;
+                performSearch(searchTerm);
+            }
+        }, 200);
+    }
+
+    // Добавляем все необходимые слушатели
+    ['input', 'change', 'keyup', 'search'].forEach(eventType => {
+        searchInput.addEventListener(eventType, handleInput);
+    });
+
+    // Специфичная обработка для мобильных браузеров
+    if ('ontouchstart' in window) {
+        searchInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                performSearch(this.value);
+            }
+        });
     }
 }
 
